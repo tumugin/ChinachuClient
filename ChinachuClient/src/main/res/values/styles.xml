@@ -1,0 +1,56 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <color name="InranPink">#b52574</color>
+    <color name="InranDarkPink">#5c1835</color>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="colorPrimary">@color/InranPink</item>
+        <item name="colorPrimaryDark">@color/InranDarkPink</item>
+        <!--何故か上手く動かないので消しました-->
+        <!-- <item name="android:actionBarStyle">@style/actionbar</item>
+        <item name="actionBarStyle" tools:ignore="NewApi">@style/actionbar</item>
+        <item name="android:spinnerDropDownItemStyle">@style/actionSpinnerItemStyle</item>-->
+    </style>
+    
+    <style name="actionbar" parent="Theme.AppCompat.Light">
+        <item name="android:colorBackground">#b52574</item>
+        <item name="android:titleTextStyle">@style/actionbarTextColor</item>
+        <item name="titleTextStyle">@style/actionbarTextColor</item>
+    </style>
+    <style name="actionbarTextColor">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    
+    <style name="actionSpinnerItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:background">#b52574</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <drawable name="transparameter">#bb000000</drawable>
+    <style name="Theme.TranslucentBackground" parent="Theme.AppCompat.Translucent">
+        <item name="android:windowBackground">@drawable/transparameter</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

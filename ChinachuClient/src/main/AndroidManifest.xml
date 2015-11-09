@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tao.chinachuclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.tao.chinachuclient.ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="SettingActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:name="ChannelScheduleActivity" >
+        </activity>
+        <activity android:name="ProgramDetail">
+        </activity>
+        <activity android:name="ProgramActivity" >
+        </activity>
+        <activity android:name="Preference">
+        </activity>
+        <activity android:name="AddServer" >
+        </activity>
+        <activity android:name="RuleActivity" >
+        </activity>
+        <activity android:name="RuleDetail" >
+        </activity>
+        <activity
+            android:name="Show_Image"
+            android:theme="@style/Theme.TranslucentBackground" >
+        </activity>
+
+        <activity
+                android:name="com.google.android.libraries.cast.companionlibrary.cast.player.VideoCastControllerActivity"
+                android:label="@string/app_name"
+                android:launchMode="singleTask"
+                android:parentActivityName="com.tao.chinachuclient.MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.tao.chinachuclient.MainActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+
+        <receiver android:name="com.google.android.libraries.cast.companionlibrary.remotecontrol.VideoIntentReceiver" >
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="com.google.android.libraries.cast.castcompanionlibrary.action.toggleplayback" />
+                <action android:name="com.google.android.libraries.cast.castcompanionlibrary.action.stop" />
+            </intent-filter>
+        </receiver>
+
+        <service
+                android:name="com.google.android.libraries.cast.companionlibrary.notification.VideoCastNotificationService"
+                android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.libraries.cast.castcompanionlibrary.action.toggleplayback" />
+                <action android:name="com.google.android.libraries.cast.castcompanionlibrary.action.stop" />
+                <action android:name="com.google.android.libraries.cast.castcompanionlibrary.action.notificationvisibility" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

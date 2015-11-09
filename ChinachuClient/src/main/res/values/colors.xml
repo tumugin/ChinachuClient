@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="anime">#fcbde1</color>
+    <color name="information">#bdfce8</color>
+    <color name="news">#d7fcbd</color>
+    <color name="sports">#bdf1fc</color>
+    <color name="variety">#fbfcbd</color>
+    <color name="drama">#fce1c4</color>
+    <color name="music">#bdc9fc</color>
+    <color name="cinema">#d6bdfc</color>
+    <color name="etc">#eeeeee</color>
+    
+    <color name="Press">#99ccff</color>
+</resources>
