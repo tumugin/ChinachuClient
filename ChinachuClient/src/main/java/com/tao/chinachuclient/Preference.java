@@ -33,7 +33,7 @@ public class Preference extends PreferenceActivity{
 		//actionbar.setDisplayShowHomeEnabled(false);
 	}
 
-	public class MyPreferencesFragment extends PreferenceFragment{
+	public static class MyPreferencesFragment extends PreferenceFragment{
 		public void onCreate(Bundle savedInstanceState){
 			super.onCreate(savedInstanceState);
 			addPreferencesFromResource(R.xml.preference);
