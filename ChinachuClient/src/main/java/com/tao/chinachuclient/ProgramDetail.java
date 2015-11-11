@@ -301,7 +301,7 @@ public class ProgramDetail extends AppCompatActivity {
 				Uri uri = Uri.parse(appClass.getChinachu().getEncRecordedMovie(programId, t, params));
 				if(mCastManager.isConnected()){
 					String encpath = uri.toString();
-					MediaInfo mediaInfo = createMediaInfo(encpath,prog.getFullTitle());
+					MediaInfo mediaInfo = createMediaInfo(encpath,prog.getFullTitle(),t);
 					loadTargetMedia(mediaInfo);
 				}else{
 					Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -434,14 +434,14 @@ public class ProgramDetail extends AppCompatActivity {
 	 *
 	 * @return メディア情報
 	 */
-	private MediaInfo createMediaInfo(String mediaURL,String Title) {
+	private MediaInfo createMediaInfo(String mediaURL,String Title,String mediatype) {
 		// メタ情報
 		MediaMetadata videoMetaData = new MediaMetadata(MediaMetadata.MEDIA_TYPE_GENERIC);
 		// タイトル
 		videoMetaData.putString(MediaMetadata.KEY_TITLE, Title);
 		MediaInfo mediaInfo = new MediaInfo.Builder(mediaURL)
 				.setStreamType(MediaInfo.STREAM_TYPE_BUFFERED)
-				.setContentType("video/webm")
+				.setContentType("video/" + mediatype)
 				.setMetadata(videoMetaData)
 				.build();
 		return mediaInfo;

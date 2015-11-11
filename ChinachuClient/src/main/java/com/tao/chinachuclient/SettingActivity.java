@@ -89,6 +89,9 @@ public class SettingActivity extends AppCompatActivity {
 		case "asf":
 			type.setSelection(4);
 			break;
+        case "mp4":
+            type.setSelection(5);
+            break;
 		}
 		switch(enc.getString("containerFormat", "")){
 		case "mpegts":
@@ -103,6 +106,9 @@ public class SettingActivity extends AppCompatActivity {
 		case "webm":
 			containerFormat.setSelection(3);
 			break;
+        case "mp4":
+            containerFormat.setSelection(4);
+            break;
 		}
 		switch(enc.getString("videoCodec", "")){
 		case "copy":
